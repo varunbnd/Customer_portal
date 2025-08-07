@@ -1,0 +1,52 @@
+﻿@model Customer_portal.Models.Soiltypetable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Soiltypetable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoilType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoilType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Process1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Process1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Process2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Process2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SoilID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <style>
+            body {
+                background-image: url('../../Images/Backgrounnd_Crud-4.jpg');
+            }
+        </style>
+    </div>
+</div>

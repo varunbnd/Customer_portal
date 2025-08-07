@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Customer_portal.Models.Cropdistributioncenter>
+
+@{
+    ViewBag.Title = "Seeds Distribution";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cropname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cropquantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Croprate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cropname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cropquantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Croprate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CropID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Details", "Details", new { id = item.CropID }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.CropID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<table>
+
+    <a href="http://localhost:51766/Usertables/Index">
+        <button class="btn carousel">Home</button>
+    </a>
+
+</table>
+
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <style>
+            body {
+                background-image: url('../../Images/Background_1.jpg');
+            }
+        </style>
+    </div>
+</div>

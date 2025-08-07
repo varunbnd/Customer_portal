@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Customer_portal.Models.Usertable>
+
+@{
+    ViewBag.Title = "User Login Data";
+}
+
+<h2>User Data</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UserID }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserID }, new { @class = "btn btn-danger" })
+            </td>
+
+        </tr>
+
+
+    }
+
+
+</table>
+
+<table>
+
+    <tr>
+        <td>
+            <a href="http://localhost:51766/Soiltypetables/Index" class="btn btn-primary  btn-block" role="button">Soil Type</a> 
+           
+        </td>
+        <td> </td>
+        <td>
+            ||
+        </td>
+        <td>
+            <a href="http://localhost:51766/Cropdistributioncenters/Index" class="btn btn-success  btn-block" role="button">Distribution centers</a>
+
+        </td>
+    </tr>
+</table>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <style>
+            body {
+                background-image: url('../../Images/pexels-elletakesphotos-1549201.jpg');
+            }
+        </style>
+    </div>
+</div>

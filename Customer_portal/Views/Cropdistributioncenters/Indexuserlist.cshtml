@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Customer_portal.Models.Cropdistributioncenter>
+
+@{
+    ViewBag.Title = "Seed Distibution centers";
+}
+
+<h2> Seed Distibution centers</h2>
+
+<style>
+    body {
+        background-image: url('../../images/Background__.jpg');
+    }
+</style>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cropname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cropquantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Croprate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cropname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cropquantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Croprate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<table>
+
+    <a href="http://localhost:51766/WelcomePage.aspx">
+        <button class="btn carousel">Home</button>
+    </a>
+
+</table>
+
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <style>
+            body {
+                background-image: url('../../Images/background_d.jpg');
+            }
+        </style>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@model Customer_portal.Models.Soiltypetable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Soiltypetable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoilType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoilType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Process1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Process1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Process2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Process2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <style>
+            body {
+                background-image: url('../../Images/White backgorunf_delete (2).jpg');
+            }
+        </style>
+    </div>
+</div>
